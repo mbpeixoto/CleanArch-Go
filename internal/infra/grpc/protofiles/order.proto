@@ -31,3 +31,8 @@ message OrdersResponse {
 message ListOrdersResponse {
   repeated OrdersResponse orders = 1;
 }
+
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+  rpc ListOrders(ListOrdersRequest) returns (ListOrdersResponse);
+}
